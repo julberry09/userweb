@@ -13,7 +13,7 @@ const Login = props => {
   let dispatch = useDispatch();
 
   //const data = { id: Id, pw: Password, actor: "admin" };
-  
+
   const [inputId, setInputId] = useState([]);
   const [inputPw, setInputPw] = useState([]);
 
@@ -39,16 +39,17 @@ const Login = props => {
             status:status ,userType:usertype ,token: token
     }).then((response) => {
 
-      if (response.token) {
+      if (response.accessToken) {
         try{
-          localStorage.setItem(ACCESS_TOKEN, response.token);
+          localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+          alert(response.accessToken);
           //login 관련 response dto 추가 예정 (이름,팀)
           dispatch(
             setUserInfo({
-              userId     :response.userId,
+              userId     :response.key,
               userName   :'Julia Kim',
               userTeam   :'금융Digital2부문',
-              email      :response.userMailAddress,
+              email      :'test111',
               userStatus :'',
               userType   :''
             }));
