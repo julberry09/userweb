@@ -10,12 +10,12 @@ export const signinById = async params => {
 /////////////////////////////////////////////////////////////////////////
 // 사용자 등록
 export const signup = userDto => {
-  return call('/users/auth/signup', 'POST', userDto);
+  return call('/mungta/users/auth/signup', 'POST', userDto);
 }
 
 //사용자 로그인
 export  const signin = userLoginDto => {
-    return  call('/users/auth/signin', 'POST', userLoginDto);
+    return  call('/mungta/users/auth/signin', 'POST', userLoginDto);
 }
 
 // 사용자 로그아웃

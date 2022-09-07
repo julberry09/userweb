@@ -42,7 +42,8 @@ const Login = props => {
       if (response.accessToken) {
         try{
           localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-          alert(response.accessToken);
+          //alert(response.accessToken);
+          console.log('response', response.accessToken );
           //login 관련 response dto 추가 예정 (이름,팀)
           dispatch(
             setUserInfo({
