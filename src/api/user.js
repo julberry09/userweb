@@ -4,7 +4,6 @@ export const ACCESS_TOKEN = 'login-token';
 
 /////////////////////////////////////////////////////////////////////////
 // 사용자 로그인
-// 변경 테스트
 export const signinById = async params => {
  ;// axios.get('/users/auth/signin', {params});
 }
